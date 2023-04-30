@@ -4,7 +4,6 @@ import CryptoChart from "./comps/coin.jsx"
 import Nav from "./comps/nav.jsx"
 import Home from "./comps/home.jsx";
 
-
 export default function App() {
     return (
       <BrowserRouter>
