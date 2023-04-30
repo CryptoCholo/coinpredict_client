@@ -1,5 +1,5 @@
 import { Fragment} from 'react';
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { Disclosure,  Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -37,16 +37,16 @@ const navigation = [
                         <div className="hidden md:block">
                           <div className="ml-10 flex items-baseline space-x-4">
                             {navigation.map((item) => (
-                              <a
+                              <Link
                                 key={item.name}
-                                href={item.href}
+                                to={item.href}
                                 className={classNames(
                                   item.current ? 'bg-indigo-100 text-indigo-900' : 'text-indigo-100 hover:bg-indigo-500 hover:text-indigo-700', 'px-3 py-2 rounded-md text-sm font-medium'
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
                               >
                                 {item.name}
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>
