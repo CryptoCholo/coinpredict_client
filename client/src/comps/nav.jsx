@@ -5,11 +5,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 
 const navigation = [
-    { name: 'Home', href: '/'},
-    { name: 'Bitcoin', href: '/btc'},
-    { name: 'Ethereum', href: '/eth'},
-    { name: 'Solana', href: '/sol'},
-    { name: 'Binance Coin', href: '/bnb'},
+    { name: 'Home', href: 'https://coin-forecast.onrender.com/'},
+    { name: 'Bitcoin', href: 'https://coin-forecast.onrender.com/btc'},
+    { name: 'Ethereum', href: 'https://coin-forecast.onrender.com/eth'},
+    { name: 'Solana', href: 'https://coin-forecast.onrender.com/sol'},
+    { name: 'Binance Coin', href: 'https://coin-forecast.onrender.com/bnb'},
   ]
   
   function classNames(...classes) {

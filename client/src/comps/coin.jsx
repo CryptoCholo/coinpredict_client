@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 
 function CryptoChart({ dataUrl, crypto }) {
+  console.log(dataUrl)
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
