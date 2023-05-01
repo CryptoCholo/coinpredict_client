@@ -90,14 +90,10 @@ const navigation = [
                           
                           <Disclosure.Button
                             key={item.name}
-                            as={<Link  to={item.href}/>}
-                            className={classNames(
-                              item.current ? 'bg-indigo-100 text-indigo-900' : 'text-indigo-100 hover:bg-indigo-700 hover:text-stone-900',
-                              'block px-3 py-2 rounded-md text-base font-medium'
-                            )}
-                            aria-current={item.current ? 'page' : undefined}
-                          >
-                           {item.name}
+                            aria-current={item.current ? 'page' : undefined}>
+                              <Link to={item.href}>
+                                {item.name}
+                              </Link>
                           </Disclosure.Button>
                         ))}
                       </div>
