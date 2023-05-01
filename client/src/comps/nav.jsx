@@ -1,3 +1,4 @@
+import { Fragment} from 'react';
 import { Outlet, Link } from "react-router-dom";
 import { Disclosure,  Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -75,7 +76,7 @@ const navigation = [
                     </div>
                   </div>
                   <Transition
-                      as="div"
+                      as={Fragment}
                       enter="transition ease-out duration-100"
                       enterFrom="transform opacity-0 scale-95"
                       enterTo="transform opacity-100 scale-100"
@@ -84,15 +85,18 @@ const navigation = [
                       leaveTo="transform opacity-0 scale-95"
                   >
 
-                     <Disclosure.Button >{open ? 'Hide' : 'Show'}</Disclosure.Button>
                     <Disclosure.Panel className="md:hidden">
                       <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                         {navigation.map((item) => (
-                         
-                           <Link key={item.name}  to={item.href} aria-current={item.current ? 'page' : undefined}>
+                          
+                          <Disclosure.Button key={item.name} onClick={close} className={classNames(
+                            item.current ? 'bg-indigo-100 text-indigo-900' : 'text-indigo-100 hover:bg-indigo-500 hover:text-stone-900',
+                            'block px-3 py-2 rounded-md text-base font-medium'
+                          )}>
+                              <Link  to={item.href} aria-current={item.current ? 'page' : undefined}>
                                 {item.name}
                               </Link>
-     
+                          </Disclosure.Button>
                         ))}
                       </div>
                     </Disclosure.Panel>
