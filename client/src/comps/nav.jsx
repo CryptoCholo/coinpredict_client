@@ -84,17 +84,13 @@ const navigation = [
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                   >
+                    <Disclosure.Button>{open ? 'Hide' : 'Show'}</Disclosure.Button>
                     <Disclosure.Panel className="md:hidden">
                       <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                         {navigation.map((item) => (
-                          
-                          <Disclosure.Button
-                            key={item.name}
-                            aria-current={item.current ? 'page' : undefined}>
-                              <Link to={item.href}>
+                              <Link  key={item.name} to={item.href} aria-current={item.current ? 'page' : undefined}>
                                 {item.name}
                               </Link>
-                          </Disclosure.Button>
                         ))}
                       </div>
                     </Disclosure.Panel>
