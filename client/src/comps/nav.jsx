@@ -87,10 +87,11 @@ const navigation = [
                     <Disclosure.Panel className="md:hidden">
                       <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                         {navigation.map((item) => (
+                          
                           <Disclosure.Button
                             key={item.name}
                             as="a"
-                            href={item.name === 'Home' ? '/' : item.href}
+                            href={item.href}
                             className={classNames(
                               item.current ? 'bg-indigo-100 text-indigo-900' : 'text-indigo-100 hover:bg-indigo-700 hover:text-stone-900',
                               'block px-3 py-2 rounded-md text-base font-medium'
