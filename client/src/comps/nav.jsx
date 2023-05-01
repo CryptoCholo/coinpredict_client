@@ -90,7 +90,7 @@ const navigation = [
                           
                           <Disclosure.Button
                             key={item.name}
-                            as="a"
+                            as={Link}
                             href={item.href}
                             className={classNames(
                               item.current ? 'bg-indigo-100 text-indigo-900' : 'text-indigo-100 hover:bg-indigo-700 hover:text-stone-900',
